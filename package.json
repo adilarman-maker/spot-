@@ -1,0 +1,13 @@
+{
+  "name": "spot-dashboard",
+  "version": "0.1.0",
+  "description": "Spot - responsive light/dark web dashboard (Dashboard page)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

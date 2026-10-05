@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spot — Messages</title>
+<script>
+  (function () {
+    var saved = localStorage.getItem('spot_theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-word">Spot</div>
+        <div class="brand-sub">College Club &amp; Campus System</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-group-label">Overview</div>
+      <a href="index.html"><span class="icon" data-icon="dashboard"></span><span class="label-text">Dashboard</span></a>
+
+      <div class="nav-group-label">Modules</div>
+      <a href="faculty.html"><span class="icon" data-icon="faculty"></span><span class="label-text">Faculty</span></a>
+      <a href="clubs.html"><span class="icon" data-icon="clubs"></span><span class="label-text">Clubs</span></a>
+      <a href="events.html"><span class="icon" data-icon="events"></span><span class="label-text">Events</span></a>
+      <a href="attendance.html"><span class="icon" data-icon="attendance"></span><span class="label-text">Attendance</span></a>
+      <a href="messages.html" class="active"><span class="icon" data-icon="messages"></span><span class="label-text">Messages</span></a>
+      <a href="approvals.html"><span class="icon" data-icon="approvals"></span><span class="label-text">Approvals</span></a>
+      <a href="timetable.html"><span class="icon" data-icon="timetable"></span><span class="label-text">Timetable</span></a>
+
+      <div class="nav-group-label">Account</div>
+      <a href="profile.html"><span class="icon" data-icon="profile"></span><span class="label-text">Profile</span></a>
+      <a href="settings.html"><span class="icon" data-icon="settings"></span><span class="label-text">Settings</span></a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span class="college-icon">🏛️</span>
+      <span>Sri Venkateswara College</span>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <div class="topbar">
+      <button class="hamburger" id="hamburger-btn" data-icon="menu"></button>
+
+      <div class="search-wrap">
+        <div class="search-box">
+          <span data-icon="search"></span>
+          <input type="text" placeholder="Search clubs, events, faculty, students…" />
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn" aria-label="Notifications">
+          <span data-icon="bell"></span>
+          <span class="badge-dot">3</span>
+        </button>
+        <div class="user-chip">
+          <div class="user-avatar">AS</div>
+          <div class="user-meta">
+            <div class="u-name">Aarav Sharma</div>
+            <div class="u-role">B.Tech CSE · 2nd Year</div>
+          </div>
+          <span class="chev" data-icon="chevDown"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrap">
+      <div class="content-main" id="content-main"></div>
+      <div class="content-rail" id="content-rail"></div>
+    </div>
+  </div>
+
+</div>
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/messages.js"></script>
+</body>
+</html>
